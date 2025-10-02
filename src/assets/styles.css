@@ -93,7 +93,6 @@ main { flex: 1 0 auto; padding-top: 72px; }
 .hero-media { display: grid; place-items: center; }
 .hero-card { background: radial-gradient(120% 100% at 100% 0%, rgba(79,156,255,0.12), transparent 60%), var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); max-width: 420px; }
 .hero-card .badge { display: inline-block; background: rgba(34,211,238,0.15); color: var(--accent); padding: 4px 10px; border-radius: 999px; font-size: 12px; margin-bottom: 10px; border: 1px solid rgba(34,211,238,0.35); animation: pulse 2.4s infinite ease-in-out; }
-.hero { padding-top: 32px; }
 
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(34,211,238,0.0); }
@@ -119,7 +118,10 @@ main { flex: 1 0 auto; padding-top: 72px; }
 .muted { color: var(--muted); }
 
 .contact-list { list-style: none; padding: 0; margin: 0 0 16px; }
-.contact-list li { margin: 8px 0; }
+.contact-list li { 
+  margin: 8px 0; 
+  text-align: center;
+}
 
 .form .field { display: grid; gap: 6px; margin-bottom: 14px; }
 .form label { color: var(--muted); font-size: 14px; }
@@ -127,7 +129,18 @@ main { flex: 1 0 auto; padding-top: 72px; }
 .form input:focus, .form textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79,156,255,0.25); }
 .form-note { color: var(--muted); font-size: 12px; margin: 8px 0 0; }
 
-.site-footer { padding: 12px 0; }
+.site-footer { 
+  padding: 12px 0; 
+  backdrop-filter: saturate(140%) blur(10px);
+  border-top: 1px solid var(--border);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  text-align: center;
+  position: fixed;
+  height: 10%;
+  width: 100%;
+  bottom: 0px;
+  background: rgba(11, 15, 20, 0.8);
+}
 .footer-inner p { margin: 0; }.site-footer { margin-top: auto; }
 body main.main-filled, main.main-filled { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 20%), var(--panel); background-repeat: no-repeat; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 

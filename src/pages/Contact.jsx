@@ -7,7 +7,7 @@ export default function Contact() {
       const message = form.message.value
       const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
       const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
-      window.location.href = `mailto:yourname@gmail.com?subject=${subject}&body=${body}`
+      window.location.href = `mailto:devStar@gmail.com?subject=${subject}&body=${body}`
     }
     return (
       <section className="section">
@@ -16,14 +16,8 @@ export default function Contact() {
             <h2>Contact</h2>
             <p>Email me directly or use the form below.</p>
           </div>
-          <div className="grid two-col">
-            <div>
-              <ul className="contact-list">
-                <li><strong>Email:</strong> <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">linkedin.com/in/yourname</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
-              </ul>
-            </div>
+          <div className="grid">
+            
             <form className="card form" onSubmit={onSubmit}>
               <div className="field">
                 <label htmlFor="name">Name</label>
@@ -40,6 +34,13 @@ export default function Contact() {
               <button type="submit" className="btn btn-primary">Send</button>
               <p className="form-note">This opens your email client using mailto.</p>
             </form>
+            <div>
+              <ul className="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:devStar@gmail.com">devStar@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/devStar" target="_blank" rel="noopener">linkedin.com/in/devStar</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
